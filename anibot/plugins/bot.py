@@ -375,6 +375,10 @@ async def start_(client: anibot, message: Message, mdata: dict):
                 k = await AUTH_USERS.find_one({'_id': ObjectId(qry)})
                 await code_cmd(k['code'], message)
                 return
+        await client.send_photo(
+            gid,
+            pic= "https://4.bp.blogspot.com/-zc_UqDaU2YM/YDPJ7H3yc2I/AAAAAAAAE3M/Ai21vNy62SEBxi109uS4UvSLR6PbwD3UgCK4BGAYYCw/s1600/The%252BGallery%252Blogo-01.jpg"
+        )
         await client.send_message(
             gid,
             text=f"""Kon'nichiwa!!!
